@@ -1,0 +1,123 @@
+{
+  "name": "Queen_Anita-V3",
+  "description": "Queen Anita V3 Is a Simple WA Bot Using Library Baileys",
+  "keywords": ["bot", "node", "baileys", "whatsapp"],
+  "logo": "https://files.catbox.moe/my977w.jpg",
+  "repository": "https://github.com/DeeCeeXxx1/Queen-Anita_V3",
+  "succes_url": "/",
+  "stack": "heroku-24",
+  "env": {
+    "SESSION_ID": {
+      "description": "Put your session ID",
+      "value": "",
+      "required": true
+    },
+    "OWNER_NUMBER": {
+      "description": "Enter the number that is hosting the bot (e.g., 2349066528353)",
+      "value": "2349066528353",
+      "required": true
+    },
+    "OWNER_NUMBERS": {
+      "description": "Enter the bot owner's number (e.g., 2349066528353)",
+      "value": "2349066528353",
+      "required": true
+    },
+    "PREFIX": {
+      "description": "Choose your bot prefix",
+      "value": ".",
+      "required": true
+    },
+    "PACK_NAME": {
+      "description": "Name of the sticker pack",
+      "value": "𝐐𝐔𝐄𝐄𝐍_𝐀𝐍𝐈𝐓𝐀-𝐕𝟑",
+      "required": false
+    },
+    "AUTHOR": {
+      "description": "Author name",
+      "value": "𝐃𝐀𝐕𝐈𝐃 𝐂𝐘𝐑𝐈𝐋",
+      "required": false
+    },
+    "PUBLIC": {
+      "description": "Set to true to make bot public",
+      "value": "true",
+      "required": true
+    },
+    "UNAVAILABLE": {
+      "description": "Set to true if bot is unavailable",
+      "value": "true",
+      "required": false
+    },
+    "AVAILABLE": {
+      "description": "Set to false if bot is unavailable",
+      "value": "false",
+      "required": false
+    },
+    "AUTO_READ_MESSAGES": {
+      "description": "Enable auto-read messages (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "CHATBOT": {
+      "description": "Enable chatbot mode (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "AUTO_REACT": {
+      "description": "Enable auto reactions (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "AUTO_STATUS_VIEW": {
+      "description": "Enable auto status view (true/false)",
+      "value": "true",
+      "required": false
+    },
+    "AUTO_STATUS_REACT": {
+      "description": "Enable auto status reaction (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "AUTO_TYPING": {
+      "description": "Enable auto typing indicator (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "WELCOME": {
+      "description": "Enable welcome messages (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "ANTI_CALL": {
+      "description": "Enable anti-call feature (true/false)",
+      "value": "false",
+      "required": false
+    },
+    "AUTO_BIO": {
+      "description": "Enable auto bio update (true/false)",
+      "value": "false",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ]
+}
